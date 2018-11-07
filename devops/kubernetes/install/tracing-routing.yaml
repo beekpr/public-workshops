@@ -1,0 +1,53 @@
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: tracing-gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway # use istio default controller
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "tracing.workshop.devops.beekeeper.rocks"
+
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: tracing
+  namespace: istio-system
+spec:
+  hosts:
+  - "tracing.workshop.devops.beekeeper.rocks"
+  gateways:
+  - tracing-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: jaegar-tracing
+        port:
+          number: 80
+
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: tracing
+  namespace: istio-system
+spec:
+  host: jaegar-tracing
+  trafficPolicy:
+    tls:
+      mode: DISABLE
+  subsets:
+  - name: istio-prometheus
+    labels:
+      app: tracing
