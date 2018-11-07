@@ -1,5 +1,8 @@
 # Workshop: Cloud Native Monitoring with Prometheus & Grafana
 
+## Slides
+[DevOps in the Real World](https://docs.google.com/presentation/d/1tnupYclcRSaYQfZrpzWCPOOlf0VZ1f5Rn1OmRvOOmLM/edit?usp=sharing)
+
 ## Objectives
 
 This workshop covers:
