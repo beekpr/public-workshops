@@ -6,7 +6,7 @@ Grafana makes it very easy to transition from single graphs to very slick dashbo
 
 ## First visit to Grafana
 
-Navigate to [Grafana](http://graphs.workshop.beekeeper.rocks)
+Navigate to [Grafana](http://graphs.workshop.devops.beekeeper.rocks)
 
 Login with default credentials: `workshop` / `workshop`
 
