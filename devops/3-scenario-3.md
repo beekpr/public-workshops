@@ -18,3 +18,4 @@ There will be a lot of noise as we record many metrics, you can filter the metri
 
 - What counter has increased that tells us something happened?
 - What does the reason mean?
+- Why is there or can there be a gap between lines?
