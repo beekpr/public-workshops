@@ -2,7 +2,7 @@
 
 ## Requirements
 
-If you are doing the workshop live, you will be given access to a temporary Prometheus & Grafana on which we will do the exercises, all you will need is a web browser.
+If you are doing the workshop live, you will be given access to a temporary Prometheus & Grafana on which we will do the exercises - all you will need is a web browser.
  
 ## A first look at the Prometheus UI
 
@@ -49,7 +49,7 @@ We can also use the bracket operator to look at all the values for the last 5 mi
     
     http_requests_total{app="http-simulator", status="200"}[5m]
 
-This is a "range query", and cannot be directly represented on a graph. If instead we want to look at the number of requests per second, we can use the `rate()` function.
+Prometheus will show an error, as this is a "range query", and cannot be directly represented on a graph. If instead we want to look at the number of requests per second, we can use the `rate()` function.
 
     sum(rate(http_requests_total{app="http-simulator", status="200"}[5m]))
 
