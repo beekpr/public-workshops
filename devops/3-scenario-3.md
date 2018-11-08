@@ -6,7 +6,7 @@ Using either [Grafana](http://graphs.workshop.devops.beekeeper.rocks) or [Promet
 
 
 ## Tips
-Try type _status_ in and let the autocomplete help you find out what happened to the container
+Try typing _status_ into the query field and let the autocomplete help you find out what happened to the container.
 
 There will be a lot of noise as we record many metrics, you can filter the metrics by doing things like:
     
@@ -17,5 +17,5 @@ There will be a lot of noise as we record many metrics, you can filter the metri
 ## Exercise
 
 - What counter has increased that tells us something happened?
-- What does the reason mean?
-- Why is there or can there be a gap between lines?
+- What does that mean?
+- Why is there or (can there be) a gap between the lines?
