@@ -43,11 +43,13 @@ This is still returning multiple time-series, but we can aggregate them using th
 
     sum(http_requests_total{app="http-simulator", status="200"})
  
+This is interesting, but does not exactly tell us much in terms of request rate. The graph just keeps going up.
+
 We can also use the bracket operator to look at all the values for the last 5 minutes `[5m]`. This will only fetch values from now to 5 minutes ago
     
     http_requests_total{app="http-simulator", status="200"}[5m]
 
-This is interesting, but does not exactly tell us much in terms of request rate. The graph just keeps going up. If instead we want to look at the number of requests per second, we can use the `rate()` function.
+This is a "range query", and cannot be directly represented on a graph. If instead we want to look at the number of requests per second, we can use the `rate()` function.
 
     sum(rate(http_requests_total{app="http-simulator", status="200"}[5m]))
 
