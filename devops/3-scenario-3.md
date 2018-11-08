@@ -6,7 +6,7 @@ Using either [Grafana](http://graphs.workshop.devops.beekeeper.rocks) or [Promet
 
 
 ## Tips
-Try typing _status_ into the query field and let the autocomplete help you find out what happened to the container.
+Try typing _container_status_ into the query field and let the autocomplete help you find out what happened to the container.
 
 There will be a lot of noise as we record many metrics, you can filter the metrics by doing things like:
     
