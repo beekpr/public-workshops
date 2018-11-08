@@ -32,7 +32,7 @@ spec:
         prefix: /
     route:
     - destination:
-        host: jaegar-tracing
+        host: tracing
         port:
           number: 80
 
@@ -43,7 +43,7 @@ metadata:
   name: tracing
   namespace: istio-system
 spec:
-  host: jaegar-tracing
+  host: tracing
   trafficPolicy:
     tls:
       mode: DISABLE
