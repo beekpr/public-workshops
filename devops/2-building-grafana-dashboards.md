@@ -14,11 +14,11 @@ Login with default credentials: `workshop` / `workshop`
 
 Navigate to _Dashboards > New_ to create a new blank dashboard. Save the dashboard under your name so that everybody can work on their own, _e.g. `Jason Brownbridge Workshop`_. (CTRL+S, CMD+S)
 
-Using drag-and-drop, you can create new widgets on the blank row. The next sections go over some of the metrics that we previously explored with the Prometheus UI, and how we can add them as widgets in this new dashboard.
+Using the _Add panel_ button, you can create new widgets on the blank row. The next sections go over some of the metrics that we previously explored with the Prometheus UI, and how we can add them as widgets in this new dashboard.
 
 ## Graphing request rate
 
-Let's create our first widget by dragging a new Graph panel to the blank row. Click on _Panel Title_ and _Edit_ to customise this new graph. The tabs at the bottom display all the options for this graph.
+Let's create our first widget by clicking _Add panel_ and choosing the Graph panel. Click on _Panel Title_ and _Edit_ to customise this new graph. The tabs at the bottom display all the options for this graph.
 
 Navigate to _General_ and edit the title of this graph to “Request Rate”.
 
