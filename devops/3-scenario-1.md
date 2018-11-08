@@ -6,7 +6,7 @@ Using either [Grafana](http://graphs.workshop.devops.beekeeper.rocks) or [Promet
 
 
 ## Tips
-Try typing _node_ in the query field and let the autocomplete help you find the correct metric
+Try typing _node_ in the query field and let the autocomplete help you find the correct metric, play around with the time period to see if you are missing something.
 
 ## Exercise
 
