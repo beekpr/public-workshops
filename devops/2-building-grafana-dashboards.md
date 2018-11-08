@@ -8,8 +8,6 @@ Grafana makes it very easy to transition from single graphs to very slick dashbo
 
 Navigate to [Grafana](http://graphs.workshop.devops.beekeeper.rocks)
 
-Login with default credentials: `workshop` / `workshop`
-
 ## Starting a new dashboard
 
 Navigate to _Dashboards > New_ to create a new blank dashboard. Save the dashboard under your name so that everybody can work on their own, _e.g. `Jason Brownbridge Workshop`_. (CTRL+S, CMD+S)
