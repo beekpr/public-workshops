@@ -19,7 +19,7 @@ e.g. `metric_name{namespace!~".*-system"}`
 
 You can also display different graphs per namespace by using `sum(...) by (namespace)`
 
-Once you have a graph that you are confident you could create an alert off of you can go the the _Alert_ tab and configure when it would fire. You need to update the _Alert Config_. Right now we have no channel to deliver the alerts. You can go to the global _Alerting_ button on the right (it looks like an alarm bell) and choose _Notification Channels_. Here you can register a channel of your choice, e.g. Slack, Telegram or a simple webhook. If you don't have anything fancy just create a webhook one by using a URL from `http://postb.in/`, you can later go to that URL to check for alerts.
+Once you have a graph that you are confident you could create an alert off of you can go the the _Alert_ tab and configure when it would fire. You need to update the _Alert Config_. Right now we have no channel to deliver the alerts. You can go to the global _Alerting_ button on the left (it looks like an alarm bell) and choose _Notification Channels_. Here you can register a channel of your choice, e.g. Slack, Telegram or a simple webhook. If you don't have anything fancy just create a webhook one by using a URL from `http://postb.in/`, you can later go to that URL to check for alerts.
 
 ## Exercise
 
