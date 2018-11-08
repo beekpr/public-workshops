@@ -14,7 +14,7 @@ Login with default credentials: `workshop` / `workshop`
 
 Navigate to _Dashboards > New_ to create a new blank dashboard. Save the dashboard under your name so that everybody can work on their own, _e.g. `Jason Brownbridge Workshop`_. (CTRL+S, CMD+S)
 
-Using drag-and-drop, you can create new widgets on the blank row. The next sections go over some of the metrics that were explored with the Prometheus UI, and how we can add them as widgets in this new dashboard.
+Using drag-and-drop, you can create new widgets on the blank row. The next sections go over some of the metrics that we previously explored with the Prometheus UI, and how we can add them as widgets in this new dashboard.
 
 ## Graphing request rate
 
@@ -22,30 +22,30 @@ Let's create our first widget by dragging a new Graph panel to the blank row. Cl
 
 Navigate to _General_ and edit the title of this graph to “Request Rate”.
 
-Navigate to _Metrics_ and add the request rate query (Next to Blue A):
+Navigate to _Metrics_ and add the request rate query (Next to the Blue "A"):
 
     sum(rate(http_requests_total{app="http-simulator"}[5m]))
 
-The legend is currently `{}`, you can update this under the metric query, to “request/s”.
+The legend is currently `{}`, you can change this under the metric query to “request/s”.
 
 You can use the other tabs to further customise the graph:
 - _Axis_ to specify units and annotate different axes
-- _Legend_ to format as a table, display min/max/current values for each series
-- _Display_ to play with look-and-feel of the graph
+- _Legend_ to format as a table and display min/max/current values for each series
+- _Display_ to play with the look-and-feel of the graph
 
 ## Displaying live error rate
 
-While data like error rate can be interesting to look over time, having a single figure for the current error rate can help give “at-a-glance” health check for the service.
+While data like error rate can be interesting to look at over time, having a single figure for the current error rate can help give an “at-a-glance” health check for the service.
 
-Click blue back arrow button on top right of screen (Back to Dashboard).
+Click the blue back arrow button on the top right of screen (Back to Dashboard).
 
-Click the button with orange plus on the top right part of screen to add a new _Singlestat_ widget, and add the overall service error rate query:
+Click the button with the orange plus on the top right part of screen to add a new _Singlestat_ widget, and add the overall service error rate query:
 
     sum(rate(http_requests_total{app="http-simulator", status="500"}[5m])) / sum(rate(http_requests_total{app="http-simulator"}[5m]))
 
-This should show some number like 0.010. The number is a percentage between 0 and 1, so we can change the unit under _Options>Unit_ (set to _None>percent(0.0-1.0)_)
+This should show some number like 0.010. The number is a percentage between 0 and 1, so we can change the unit under _Options>Unit_ (set it to _None>percent(0.0-1.0)_)
 
-The current value displayed is also the average over the Dashboard time window, instead we want to see the value at the end of the time-window (i.e. now). You can change this under Options>Stat (set to _Current_).
+The current value displayed is the average over the Dashboard time window. Instead, we want to see the value at the end of the time-window (i.e. now). You can change this under Options>Stat (set it to _Current_).
 
 We can now add thresholds and colors to use the error rate as a health signal for the service. Under Options>Coloring, check _Value_ and set _Threshold_ to `0.01,0.05`, which means:
 
@@ -59,13 +59,13 @@ It's also possible to overlay the evolution over the Grafana time period, by ena
 
 ## Table of Top-requested endpoints
 
-Create a new Table panel. Same way you created other panels/widgets.
+Create a new Table panel, the same way you created the other panels/widgets.
 
 Add the following metric (request rate for each endpoint):
 
     sum(rate(http_requests_total{app="http-simulator"}[5m])) by (endpoint)
 
-Because Prometheus is returning time series for the entire time period, the table contains way too many values. Under _Legend format_ set _Instant_ to _on_. There should only be 5 entries displayed in the table.
+Because Prometheus is returning time series for the entire time period, the table contains way too many values. Under _Legend format_ set _Instant_ to _on_. There should now only be 5 entries displayed in the table.
 
 The time column is not relevant so we can hide it under _Column Styles_ by selecting _Time_ rule and changing the _Type_ to _Hidden_. We can also rename the `Value` column to something more meaningful:
 
@@ -75,7 +75,7 @@ The time column is not relevant so we can hide it under _Column Styles_ by selec
 
 Click on the `Requests/s` header in the table to order the table by most active endpoints first.
 
-Now lets return to the dashboard by click blue button on top right and update the time frame to be _Last 5 minutes_ and _Refreshing every: 5s_ (also done on the top right).
+Now let's return to the dashboard by clicking the blue button on the top right and update the time frame to be _Last 5 minutes_ and _Refreshing every: 5s_ (also done on the top right).
 
 Finally lets save the dashboard and tick _Save the current time range_ to preserve your changes.
 
