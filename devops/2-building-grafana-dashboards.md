@@ -41,7 +41,7 @@ Click the button with the orange plus on the top right part of screen to add a n
 
     sum(rate(http_requests_total{app="http-simulator", status="500"}[5m])) / sum(rate(http_requests_total{app="http-simulator"}[5m]))
 
-This should show some number like 0.010. The number is a percentage between 0 and 1, so we can change the unit under _Options>Unit_ (set it to _None>percent(0.0-1.0)_)
+This should show some number like 0.010. The number is a percentage between 0 and 1, so we can change the unit under _Options>Unit_ (set it to _None>percent(0.0-1.0)_). If it does not work, try typing "percent" to open a drop down.
 
 The current value displayed is the average over the Dashboard time window. Instead, we want to see the value at the end of the time-window (i.e. now). You can change this under Options>Stat (set it to _Current_).
 
