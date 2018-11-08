@@ -38,4 +38,4 @@ Select the `productpage` _Service_ and click _Find Traces_
 - Can you make some assumptions about the way the product page service works?
 - Do you think the product page service has any timeouts?
 - Do you think the product page service has any retries?
-- Can you use therd  Istio Workload Dashboain Grafana to see the same results? Try setting _Namespace_ to _bookinfo_ and _Workload_ to _productpage_v1_ and see if you can spot the service which is the culprit.
+- Can you use the Istio Workload Dashboard Grafana to see the same results? Try setting _Namespace_ to _bookinfo_ and _Workload_ to _productpage_v1_ and see if you can spot the service which is the culprit.
