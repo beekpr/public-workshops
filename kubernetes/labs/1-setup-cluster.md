@@ -2,6 +2,7 @@
 
 ## Important
 Backup your ~/.kube directory!!!!
+
 Latest version of minikube binary did not work for me so I pinned to 1.3.1
 
 Original instructions at https://kubernetes.io/docs/tasks/tools/install-minikube/
