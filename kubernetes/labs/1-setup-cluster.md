@@ -3,6 +3,9 @@
 ## Important
 Backup your ~/.kube directory!!!!
 
+Original instructions at https://kubernetes.io/docs/tasks/tools/install-minikube/
+
+
 ## Install the dependencies (Linux)
 
 ```
