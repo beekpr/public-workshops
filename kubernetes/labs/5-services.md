@@ -13,7 +13,7 @@ The loadbalancer is connected to NodePort the service exposes and firewall rules
 
 You can simulate this behaviour by messing with your routes and DNS settings locally but it can be error prone so we will avoid it for this workshop.
 
-## Tutorial: Create a Service
+## Tutorial: Create a broken Service, then Fixing it
 
 Explore the demo-app service configuration file:
 
@@ -38,13 +38,14 @@ What is the port it is bound to? What is the NodePort? What is the cluster ip? O
 
 > This will NOT work out the box as the pod is mis-configured - can you see why? Next Exercise will tell you what is wrong.
 
+We can get our service IP and PORT by running the commands below.
+
 We can connect to there service by finding the ip of our minikube cluster ```export IP=$(minikube ip)``` and getting the NodePort from our service
 ```export PORT=$(kubectl get service demo-app -o jsonpath="{.spec.ports[0].nodePort}" )```
 
-We could also use ```minikube service demo-app``` to open a browser window to service, you will need to update protocol to ```https```
+### Service doesn't work
 
-
-### Hints
+However if we try to get a response from the app we get an error.
 
 ```
 # From a pod running on node try this:
@@ -103,6 +104,9 @@ kubectl describe services demo-app
 * How many endpoints does the `demo-app` service have?
 * Can you make a request now?
 
+### Bonus
+
+We could also use ```minikube service demo-app``` to open a browser window to service, you will need to update protocol to ```https```
 
 ## Tutorial: Remove Labels from Pods
 
