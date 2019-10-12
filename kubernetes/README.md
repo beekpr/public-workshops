@@ -2,7 +2,7 @@
 This great workshop sources a lot of material from https://github.com/kelseyhightower/craft-kubernetes-workshop
 
 ## Slides
- * [Kubernetes Workshop](https://docs.google.com/presentation/d/17pBjcDikTlNsCZZ4jcrbkPnpYfR5-ftMBj-QQ0rve_o/edit?usp=sharing)
+ * [Kubernetes Workshop](https://docs.google.com/presentation/d/1BpHcl5BquYxARtThM2Xr1KNyf7ZDAEy3aTAV_WmUjmo/edit?usp=sharing)
 
 ## Labs
  * [Setup cluster](labs/1-setup-cluster.md)
