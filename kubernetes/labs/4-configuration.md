@@ -91,7 +91,7 @@ curl https://127.0.0.1:10443
 Why did it fail?
 
 ```
-curl https://127.0.0.1:10443
+curl -k https://127.0.0.1:10443
 ```
 
 
