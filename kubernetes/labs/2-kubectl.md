@@ -1,7 +1,7 @@
 # Playing around with kubectl
 
 ## Cluster Info
-Lets see if your cluster is up and running (shout if it is not)
+Let's see if your cluster is up and running (shout if it is not):
 ```
 $ kubectl cluster-info
 ```
@@ -35,8 +35,8 @@ $ kubectl get services
 
 ### Bonus:
 
-* How do describe a node?
-* What is the node's kernel version
+* How do you describe a node?
+* What is the node's kernel version?
 
 ## Describe API objects
 
