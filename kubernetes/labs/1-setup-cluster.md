@@ -31,4 +31,4 @@ minikube start --vm-driver=virtualbox
 
 ## Summary
 
-In this lab your learned how to bootstrap a kubernetes using minikube
+In this lab you learned how to bootstrap a kubernetes using minikube.
