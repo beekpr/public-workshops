@@ -32,7 +32,9 @@ So if we were on AWS this would create an ELB behind the scenes and setup securi
 
 ## Exercise: Verify service creation
 
-What is the port it is bound to? What is the NodePort? What is the cluster ip? Other pods can reference the service by using its cluster ip.
+* What is the port it is bound to?
+* What is the NodePort?
+* What is the cluster ip? Other pods can reference the service by using its cluster ip.
 
 ## Exercise: Interact with the Demo App Service Remotely
 
@@ -40,7 +42,7 @@ What is the port it is bound to? What is the NodePort? What is the cluster ip? O
 
 We can get our service IP and PORT by running the commands below.
 
-We can connect to there service by finding the ip of our minikube cluster ```export IP=$(minikube ip)``` and getting the NodePort from our service
+We can connect to the service by finding the ip of our minikube cluster ```export IP=$(minikube ip)``` and getting the NodePort from our service
 ```export PORT=$(kubectl get service demo-app -o jsonpath="{.spec.ports[0].nodePort}" )```
 
 ### Service doesn't work
