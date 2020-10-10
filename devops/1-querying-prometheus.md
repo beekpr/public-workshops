@@ -9,7 +9,7 @@ If you are doing the workshop live, you will be given access to a temporary Prom
 Navigate to [Prometheus](http://metrics.workshop.devops.beekeeper.rocks).
 
 You should see the Prometheus UI, with the following tabs:
-- Graph: default view, where we can you can query time-series (We will only look at this)
+- Graph: default view, where you can query time-series (We will only look at this)
 - Status: current state of scraped targets, service discovery as well as various configuration
 - Help: link to the Prometheus official documentation (essential!)
 
