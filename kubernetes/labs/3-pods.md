@@ -24,7 +24,7 @@ kubectl create -f pods/demo-app.yaml
 
 ## Exercise: View Pod details
 
-Use the `kubectl get` and `kubect describe` commands to view details for the `demo-app` Pod:
+Use the `kubectl get` and `kubectl describe` commands to view details for the `demo-app` Pod:
 
 ### Quiz
 
